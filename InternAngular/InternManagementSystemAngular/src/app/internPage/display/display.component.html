@@ -1,0 +1,29 @@
+<br>
+<button type="button" style="text-align:center; margin-left: 650px;" class="btn btn-outline-primary" routerLink="/internPage">Add Intern Detais</button> <hr/>
+<div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Intern ID</th>
+        <th>Intern Name</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+  
+      <tr *ngFor="let intern of interns">
+      
+        <td>{{intern.internID}} </td>
+        <td> {{intern.internName}}</td>
+        <td>{{intern.phoneNumber}}</td>
+        <td>{{intern.emailID}}</td>
+        <td> {{intern.address}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
+  

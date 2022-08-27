@@ -1,0 +1,71 @@
+
+<section class="vh-100 bg-image"
+  style="background-image: url('https://media.istockphoto.com/photos/modern-keyboard-with-blue-online-registration-button-picture-id1268691831?b=1&k=20&m=1268691831&s=170667a&w=0&h=IIBnyOXxCfPeft3R_RDna89ced94KSPoCQ5NDb__4zc=');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form [formGroup]="signupForm" (ngSubmit)="SignUp()">
+
+                <div class="form-outline mb-4">
+                    <label class="form-lable">UserName</label>
+                    <input formControlName="UserName" class="form-control" type="text" placeholder="User name" required>
+                    <div class="form-text text-danger"
+                    *ngIf="UserName.errors?.['required']&&(UserName.dirty||UserName.touched)">
+                    UserName is required Please enter username
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-lable">FirstName</label>
+                    <input formControlName="FirstName" class="form-control" type="text" placeholder="FirstName" required>
+                    <div class="form-text text-danger"
+                    *ngIf="FirstName.errors?.['required']&&(FirstName.dirty||FirstName.touched)">
+                    FirstName is required Please enter
+                </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-lable">LastName</label>
+                    <input formControlName="LastName" class="form-control" type="text" placeholder="Last name" required>
+                    <div class="form-text text-danger" *ngIf="LastName.errors?.['required']&&(LastName.dirty||LastName.touched)">
+                    LastName is required Please enter
+                </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-lable">Contact</label>
+                    <input formControlName="Contact" class="form-control" type="text" placeholder="enter Contact" required>
+                    <div class="form-text text-danger"*ngIf="Contact.errors?.['required']&&(Contact.dirty||Contact.touched)">
+                    Contact is required Please enter
+                </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-lable">Password</label>
+                    <input formControlName="Password" class="form-control" type="password" placeholder="Password" required>
+                    <div class="form-text text-danger"
+                      *ngIf="Password.errors?.['required']&&(Password.dirty||Password.touched)">
+                      Password is required
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="ngSubmit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a routerLink="/login"class="fw-bold text-body"><u>Login here</u></a></p>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

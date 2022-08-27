@@ -1,0 +1,23 @@
+<br>
+<button type="button" class="btn btn-outline-primary" style="margin-left: 650px;" routerLink="/departmentPage">Add Designation</button> <hr/>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">DesignationID</th>
+        <th scope="col">DesignationName</th>
+        <th scope="col">RoleName</th>
+        <th scope="col">DepartMent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departments">
+        <td>{{department.designationID}} </td>
+        <td> {{department.designationName}}</td>
+        <td>{{department.roleName}}</td>
+        <td>{{department.departMent}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+  
